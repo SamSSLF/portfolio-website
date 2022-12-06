@@ -6,36 +6,36 @@ const projects = [
     title: "A Renewable Energy Forecast App to Inform Household Energy Usage",
     description:
       "Disrupting the personal fitness industry by personlising your gym workout with your very own personal trainer.",
-    imageSrc: "../assets/hot-air-balloons.jpg",
+    imageSrc: new URL("../assets/hot-air-balloons.jpg", import.meta.url).href,
     imageAlt: "hot air balloon festival",
   },
   {
     title: "Design and Build of an Environmental Monitoring Portal",
     description:
       "Disrupting the personal fitness industry by personlising your gym workout with your very own personal trainer.",
-    imageSrc: "../assets/hot-air-balloons.jpg",
-    imageAlt: "hot air baloon festival",
+    imageSrc: new URL("../assets/hot-air-balloons.jpg", import.meta.url).href,
+    imageAlt: "hot air balloon festival",
   },
   {
     title: "Design of a Smart Gym Mobile App",
     description:
       "Disrupting the personal fitness industry by personlising your gym workout with your very own personal trainer.",
-    imageSrc: "../assets/hot-air-balloons.jpg",
-    imageAlt: "hot air baloon festival",
+    imageSrc: new URL("../assets/hot-air-balloons.jpg", import.meta.url).href,
+    imageAlt: "hot air balloon festival",
   },
   {
     title: "A Lightweight Tandem Bicycle Frame",
     description:
       "Disrupting the personal fitness industry by personlising your gym workout with your very own personal trainer.",
-    imageSrc: "../assets/hot-air-balloons.jpg",
-    imageAlt: "hot air baloon festival",
+    imageSrc: new URL("../assets/hot-air-balloons.jpg", import.meta.url).href,
+    imageAlt: "hot air balloon festival",
   },
   {
     title: "Juno Circular Toy Company",
     description:
       "Disrupting the personal fitness industry by personlising your gym workout with your very own personal trainer.",
-    imageSrc: "../assets/hot-air-balloons.jpg",
-    imageAlt: "hot air baloon festival",
+    imageSrc: new URL("../assets/hot-air-balloons.jpg", import.meta.url).href,
+    imageAlt: "hot air balloon festival",
   },
 ];
 </script>

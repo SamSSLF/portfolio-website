@@ -4,9 +4,9 @@
   >
     <div class="flex-auto lg:col-span-7 xl:col-span-8">
       <div class="aspect-w-5 aspect-h-2 overflow-hidden rounded-lg bg-gray-100">
-        <slot name="hero-image"
-          ><img :src="project.imageSrc" :alt="project.imageAlt"
-        /></slot>
+        <slot name="hero-image">
+          <img :src="project.imageSrc" :alt="project.imageAlt" />
+        </slot>
       </div>
     </div>
     <div class="mt-6 lg:col-span-5 lg:mt-0 xl:col-span-4">
