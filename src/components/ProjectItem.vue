@@ -3,7 +3,7 @@
     class="flex flex-col mb-8 pb-8 border-b border-gray-200 lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8 lg:mb-12 lg:pb-12"
   >
     <div class="flex-auto lg:col-span-7 xl:col-span-8">
-      <div class="aspect-w-5 aspect-h-2 overflow-hidden rounded-lg bg-gray-100">
+      <div class="aspect-w-5 aspect-h-2 overflow-hidden bg-gray-100">
         <slot name="hero-image">
           <img :src="project.imageSrc" :alt="project.imageAlt" />
         </slot>
