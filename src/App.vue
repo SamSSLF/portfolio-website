@@ -5,9 +5,9 @@ import FooterVue from "./components/Footer.vue";
 </script>
 
 <template>
-  <div class="bg-white lg:grid lg:grid-cols-12 lg:gap-x-8">
+  <div class="bg-slate-50 lg:grid lg:grid-cols-12 lg:gap-x-8">
     <div
-      class="px-16 py-12 bg-white shadow-sm xl:px-0 lg:col-span-8 lg:col-start-3 xl:col-span-8 xl:col-start-3"
+      class="px-16 py-12 bg-white shadow-md xl:px-10 lg:col-span-8 lg:col-start-3 xl:col-span-8 xl:col-start-3"
     >
       <NavbarVue />
       <RouterView />
