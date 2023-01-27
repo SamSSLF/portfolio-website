@@ -3,8 +3,10 @@ import { RouterLink } from "vue-router";
 </script>
 
 <template>
-  <header class="text-2xl font-roboto leading-7 mb-4">
-    SAMANTHA <br />FOONG
+<header class="text-4xl font-raleway font-semibold my-16 mr-24">
+    Hi, my name is Samantha. I am a <span>Design Engineer</span> and I want to <span>design
+      seamless, delightful user experiences</span> and create the worlds most valuable
+    products.
   </header>
   <nav class="font-raleway font-semibold text-slate-300">
     <ol class="flex justify-between mb-16">

@@ -1,5 +1,10 @@
 <script setup>
 import ProjectItemVue from "../components/ProjectItem.vue";
+import { onMounted, onUnmounted, onBeforeMount, ref } from "vue";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {
@@ -62,12 +67,49 @@ const projects = [
     imageAlt: "hot air balloon festival",
   },
 ];
+
+const main = ref();
+const ctx = ref();
+
+onMounted(() => {
+  // gsap.from("#list", {
+  //   duration: 1,
+  //   opacity: 0,
+  //   // scale: 0,
+  //   y: 200,
+  //   // ease: 'power1',
+  // });
+
+  ctx.value = gsap.context((self) => {
+    const projects = self.selector("#project");
+    projects.forEach((project) => {
+      gsap.from(project, {
+        opacity: 0,
+        scale: 0.8,
+        duration: 1,
+        scrollTrigger: {
+          trigger: project,
+          start: "top bottom",
+          end: "75% bottom",
+          scrub: true,
+        },
+      });
+    });
+  }, main.value); // <- Scope!
+});
+
+onUnmounted(() => {
+  ctx.value.revert(); // <- Easy Cleanup!
+});
 </script>
 
 <template>
-  <ProjectItemVue
-    v-for="project in projects"
-    :key="project.title"
-    :project="project"
-  ></ProjectItemVue>
+  <div id="list" ref="main">
+    <ProjectItemVue
+      v-for="project in projects"
+      :key="project.title"
+      :project="project"
+      id="project"
+    ></ProjectItemVue>
+  </div>
 </template>
