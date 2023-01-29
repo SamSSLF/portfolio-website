@@ -2,22 +2,6 @@
 import { RouterView } from "vue-router";
 import NavbarVue from "./components/Navbar.vue";
 import FooterVue from "./components/Footer.vue";
-// import { onMounted, onUnmounted, onBeforeMount, ref } from "vue";
-// import gsap from "gsap";
-
-// onMounted(() => {
-//   gsap.from("#list", {
-//     duration: 1,
-//     opacity: 0,
-//     scale: 0,
-//     // y: 200,
-//     // ease: "power1",
-//     stagger: {
-//       // from: "edges",
-//       each: 0.1,
-//     },
-//   });
-// });
 </script>
 
 <template>

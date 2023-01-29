@@ -1,6 +1,6 @@
 <script setup>
 import ProjectItemVue from "../components/ProjectItem.vue";
-import { onMounted, onUnmounted, onBeforeMount, ref } from "vue";
+import { onMounted, onUnmounted, ref } from "vue";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -77,7 +77,7 @@ onMounted(() => {
   //   opacity: 0,
   //   // scale: 0,
   //   y: 200,
-  //   // ease: 'power1',
+  //   ease: 'power1',
   // });
 
   ctx.value = gsap.context((self) => {
