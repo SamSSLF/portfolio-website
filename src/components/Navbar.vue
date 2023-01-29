@@ -28,15 +28,15 @@ const enter = (el) => {
   </div>
 
   <transition appear @enter="enter" :css="false">
-    <header id="intro" class="text-4xl font-raleway font-semibold mb-16 mr-24">
+    <header id="intro" class="text-4xl font-raleway font-semibold mb-16 mr-28">
       Hi, my name is Samantha. I am a
       <span
-        class="bg-gradient-to-b from-gray-300 to-gray-500 bg-clip-text text-transparent"
+        class="bg-gradient-to-bl from-gray-400 to-gray-500 bg-clip-text text-transparent"
         >Design Engineer</span
       >
       and I want to
       <span
-        class="bg-gradient-to-b from-gray-300 to-gray-500 bg-clip-text text-transparent"
+        class="bg-gradient-to-bl from-gray-400 to-gray-500 bg-clip-text text-transparent"
         >design seamless, delightful user experiences</span
       >
       and create the worlds most valuable products.
@@ -45,38 +45,15 @@ const enter = (el) => {
 
   <nav class="hidden lg:flex mb-16 lg:justify-between font-normal">
     <div class="lg:space-x-8">
-      <a
-        href="#"
-        class="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
-        >Dashboard</a
-      >
-      <a
-        href="#"
-        class="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
-        >Dashboard</a
-      >
-      <a
-        href="#"
-        class="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
-        >Dashboard</a
-      >
-      <a
-        href="#"
-        class="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
-        >Dashboard</a
-      >
+      <NavbarLink to="/">Featured</NavbarLink>
+      <NavbarLink to="/ux">UI/UX</NavbarLink>
+      <NavbarLink to="/web">Web Development</NavbarLink>
+      <NavbarLink to="/user">User-Centered Design</NavbarLink>
+      <NavbarLink to="/engineering">Engineering Analysis</NavbarLink>
     </div>
     <div class="lg:space-x-8">
-      <a
-        href="#"
-        class="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
-        >Dashboard</a
-      >
-      <a
-        href="#"
-        class="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
-        >Dashboard</a
-      >
+      <NavbarLink to="/contact">Contact</NavbarLink>
+      <NavbarLink to="/cv">CV</NavbarLink>
     </div>
   </nav>
 
