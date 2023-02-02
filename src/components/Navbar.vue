@@ -1,6 +1,7 @@
 <script setup>
 import gsap from "gsap";
 import NavbarLink from "./NavbarLink.vue";
+import { useFilterStore } from "../stores/filter"
 
 const enter = (el) => {
   gsap.from(el, {
@@ -10,6 +11,8 @@ const enter = (el) => {
     duration: 2,
   });
 };
+
+const store = useFilterStore()
 </script>
 
 <template>
@@ -45,11 +48,10 @@ const enter = (el) => {
 
   <nav class="hidden lg:flex mb-16 lg:justify-between font-normal">
     <div class="lg:space-x-8">
-      <NavbarLink to="/">Featured</NavbarLink>
-      <NavbarLink to="/ux">UI/UX</NavbarLink>
-      <NavbarLink to="/web">Web Development</NavbarLink>
-      <NavbarLink to="/user">User-Centered Design</NavbarLink>
-      <NavbarLink to="/engineering">Engineering Analysis</NavbarLink>
+      <NavbarLink to="/" @click="store.show('featured')">Featured</NavbarLink>
+      <NavbarLink to="/ux" @click="store.show('ux')">UI/UX</NavbarLink>
+      <NavbarLink to="/dev" @click="store.show('dev')">Web Development</NavbarLink>
+      <NavbarLink to="/engineering" @click="store.show('eng')">Engineering Analysis</NavbarLink>
     </div>
     <div class="lg:space-x-8">
       <NavbarLink to="/contact">Contact</NavbarLink>

@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="mt-6 lg:col-span-5 lg:mt-0 xl:col-span-4">
-      <h3 class="text-xl font-raleway font-semibold text-gray-900">
+      <h3 class="text-2xl font-raleway font-semibold text-gray-900">
         <slot name="title">{{ project.title }}</slot>
       </h3>
       <div class="mt-1 mb-4">
@@ -26,7 +26,7 @@
         </span>
       </div>
 
-      <p class="mt-2 font-lora text-sm text-gray-500 line-clamp-4">
+      <p class="mt-2 font-raleway font-light text-xs text-gray-500 line-clamp-4 leading-normal">
         <slot name="description">{{ project.description }}</slot>
       </p>
       <svg
