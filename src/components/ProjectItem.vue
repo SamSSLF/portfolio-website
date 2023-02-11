@@ -1,9 +1,9 @@
 <template>
   <div
-    class="flex flex-col mb-8 pb-8 border-b border-gray-200 lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8 lg:mb-12 lg:pb-12"
+    class="flex flex-col mb-8 pb-8 border-b border-gray-200 xl:grid xl:grid-cols-12 xl:items-center xl:gap-x-8 xl:mb-12 xl:pb-12"
   >
-    <div class="flex-auto lg:col-span-7 xl:col-span-8">
-      <div class="aspect-w-16 aspect-h-9 overflow-hidden bg-gray-100">
+    <div class="flex-auto xl:col-span-8">
+      <div class="aspect-w-16 aspect-h-9 overflow-hidden bg-gray-100 xl:mb-8 mb-4">
         <slot name="hero-image">
           <img
             :src="project.imageSrc"
@@ -13,8 +13,8 @@
         </slot>
       </div>
     </div>
-    <div class="mt-6 lg:col-span-5 lg:mt-0 xl:col-span-4">
-      <h3 class="text-2xl font-raleway font-semibold text-gray-900">
+    <div class="lg:col-span-5 xl:mt-0 xl:col-span-4">
+      <h3 class="text-xl md:text-2xl 3xl:text-3xl font-raleway font-semibold text-gray-900 mb-2">
         <slot name="title">{{ project.title }}</slot>
       </h3>
       <div class="mt-1 mb-4">
@@ -26,7 +26,7 @@
         </span>
       </div>
 
-      <p class="mt-2 font-raleway font-light text-xs text-gray-500 line-clamp-4 leading-normal">
+      <p class="mt-2 font-raleway font-light text-xs text-gray-500 line-clamp-4 leading-normal 3xl:text-sm">
         <slot name="description">{{ project.description }}</slot>
       </p>
       <svg

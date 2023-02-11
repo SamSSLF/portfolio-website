@@ -8,6 +8,9 @@ module.exports = {
         raleway: ["Raleway", "sans-serif"],
         roboto: ["Roboto Condensed", "sans-serif"],
       },
+      screens: {
+        '3xl': '2000px',
+      },
     },
   },
   corePlugins: {

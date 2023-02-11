@@ -1,7 +1,7 @@
 <script setup>
 import gsap from "gsap";
 import NavbarLink from "./NavbarLink.vue";
-import { useFilterStore } from "../stores/filter"
+import { useFilterStore } from "../stores/filter";
 
 const enter = (el) => {
   gsap.from(el, {
@@ -12,7 +12,7 @@ const enter = (el) => {
   });
 };
 
-const store = useFilterStore()
+const store = useFilterStore();
 </script>
 
 <template>
@@ -31,27 +31,35 @@ const store = useFilterStore()
   </div>
 
   <transition appear @enter="enter" :css="false">
-    <header id="intro" class="text-4xl font-raleway font-semibold mb-16 mr-28">
-      Hi, my name is Samantha. I am a
-      <span
-        class="bg-gradient-to-bl from-gray-400 to-gray-500 bg-clip-text text-transparent"
-        >Design Engineer</span
-      >
-      and I want to
-      <span
-        class="bg-gradient-to-bl from-gray-400 to-gray-500 bg-clip-text text-transparent"
-        >design seamless, delightful user experiences</span
-      >
-      and create the worlds most valuable products.
+    <header
+      id="intro"
+      class="grid grid-cols-12 text-xl sm:text-2xl md:text-3xl lg:text-4xl 3xl:text-5xl font-raleway font-semibold mb-16"
+    >
+      <div class="col-span-full xl:col-span-10 3xl:col-span-8">
+        Hi, my name is Samantha. I am a
+        <span
+          class="bg-gradient-to-bl from-gray-400 to-gray-500 bg-clip-text text-transparent"
+          >Design Engineer</span
+        >
+        and I want to
+        <span
+          class="bg-gradient-to-bl from-gray-400 to-gray-500 bg-clip-text text-transparent"
+          >design seamless, delightful user experiences</span
+        >
+        and create the worlds most valuable products.
+      </div>
     </header>
   </transition>
 
-  <nav class="hidden lg:flex mb-16 lg:justify-between font-normal">
+  <nav class="hidden lg:flex mb-10 lg:justify-between font-normal">
     <div class="lg:space-x-8">
       <NavbarLink to="/" @click="store.show('featured')">Featured</NavbarLink>
-      <NavbarLink to="/ux" @click="store.show('ux')">UI/UX</NavbarLink>
+      <NavbarLink to="/projects" @click="store.show('all')"
+        >Projects</NavbarLink
+      >
+      <!-- <NavbarLink to="/ux" @click="store.show('ux')">UI/UX</NavbarLink>
       <NavbarLink to="/dev" @click="store.show('dev')">Web Development</NavbarLink>
-      <NavbarLink to="/engineering" @click="store.show('eng')">Engineering Analysis</NavbarLink>
+      <NavbarLink to="/engineering" @click="store.show('eng')">Engineering Analysis</NavbarLink> -->
     </div>
     <div class="lg:space-x-8">
       <NavbarLink to="/contact">Contact</NavbarLink>

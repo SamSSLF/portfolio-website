@@ -13,7 +13,7 @@ const isActive = computed(() => route.path === props.to);
   <RouterLink
     :to="to"
     :class="{ 'border-b border-black font-semibold': isActive }"
-    class="hover:text-slate-500 cursor-pointer inline-flex items-center pt-1 text-sm text-gray-900"
+    class="hover:text-slate-500 cursor-pointer inline-flex items-center pt-1 text-sm text-gray-900 3xl:text-lg"
     ><slot
   /></RouterLink>
 </template>
