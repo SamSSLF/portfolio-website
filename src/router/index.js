@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/Home.vue";
 import ProjectGalleryView from "../views/ProjectGallery.vue";
+import AtmoView from "../views/Projects/Atmo.vue";
+import StanceView from "../views/Projects/Stance.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -52,6 +54,8 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import("../views/Contact.vue"),
     },
+    { path: "/projects/Atmo", name: "Atmo", component: AtmoView },
+    { path: "/projects/Stance", name: "Stance", component: StanceView },
   ],
 });
 

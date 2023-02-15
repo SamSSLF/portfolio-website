@@ -3,7 +3,7 @@
     class="flex flex-col mb-8 pb-8 border-b border-gray-200 xl:grid xl:grid-cols-12 xl:items-center xl:gap-x-8 xl:mb-12 xl:pb-12"
   >
     <div class="flex-auto xl:col-span-8">
-      <div class="aspect-w-16 aspect-h-9 overflow-hidden bg-gray-100 xl:mb-8 mb-4">
+      <div class="aspect-w-16 aspect-h-9 overflow-hidden bg-gray-100 hover:cursor-pointer">
         <slot name="hero-image">
           <img
             :src="project.imageSrc"
@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="lg:col-span-5 xl:mt-0 xl:col-span-4">
-      <h3 class="text-xl md:text-2xl 3xl:text-3xl font-raleway font-semibold text-gray-900 mb-2">
+      <h3 class="text-xl md:text-2xl 3xl:text-3xl font-raleway font-semibold text-gray-900 mb-2 hover:cursor-pointer">
         <slot name="title">{{ project.title }}</slot>
       </h3>
       <div class="mt-1 mb-4">
@@ -35,7 +35,7 @@
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        class="w-6 h-6 mt-8 float-right text-gray-400"
+        class="w-6 h-6 mt-8 mr-6 float-right text-gray-400 hover:cursor-pointer hover:translate-x-3 hover:scale-150 transition"
       >
         <path
           stroke-linecap="round"

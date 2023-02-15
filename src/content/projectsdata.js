@@ -5,7 +5,7 @@ const projects = [
       filter: ["featured", "dev", "ux"],
       description:
         "Built the front-end of a real-time environmental monitoring portal using Vue.js and Tailwind.css. A user-centred design process was used to design the user experience of the portal and thus its user interface. I built Atmo’s first design system following Material Design guidelines, using “design tokens” to store and use styles across designs, code, tools and platforms.",
-      imageSrc: new URL("../assets/atmo-hero-2.png", import.meta.url).href,
+      imageSrc: new URL("../assets/atmo-hero-3.png", import.meta.url).href,
       imageAlt: "hot air balloon festival",
     },
     {
@@ -26,7 +26,7 @@ const projects = [
         "Systems Design",
         "Sustainable Design and Manufacture",
       ],
-      filter: ["featured", "design", "ux"],
+      filter: ["design", "ux"],
       description:
         "A circular business model to address the wasteful nature of the children’s toy market. A systems design approach was used to identify and close waste streams within the lifecycle of a children’s toy, then a human-centred design approach was used to propose a design for toy sharing product-service system.",
       imageSrc: new URL("../assets/juno-hero.jpg", import.meta.url).href,

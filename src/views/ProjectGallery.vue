@@ -4,12 +4,17 @@ import ProjectCard from "../components/ProjectCard.vue";
 </script>
 
 <template>
-  <ul role="list" class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-    <ProjectCard
-      v-for="project in projects"
-      :key="project.title"
-      :project="project"
-      id="project"
-    ></ProjectCard>
-  </ul>
+  <div class="col-start-2 col-span-1">
+    <ul
+      role="list"
+      class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
+    >
+      <ProjectCard
+        v-for="project in projects"
+        :key="project.title"
+        :project="project"
+        id="project"
+      ></ProjectCard>
+    </ul>
+  </div>
 </template>

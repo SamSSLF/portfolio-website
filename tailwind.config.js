@@ -9,7 +9,7 @@ module.exports = {
         roboto: ["Roboto Condensed", "sans-serif"],
       },
       screens: {
-        '3xl': '2000px',
+        "3xl": "2000px",
       },
     },
   },
@@ -19,5 +19,6 @@ module.exports = {
   plugins: [
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/line-clamp"),
+    require("@tailwindcss/typography"),
   ],
 };

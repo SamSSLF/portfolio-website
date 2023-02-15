@@ -18,6 +18,15 @@ const filteredProjects = computed(() => {
   return tempProjects;
 });
 
+const enter = (el) => {
+  gsap.from(el, {
+    opacity: 0,
+    y: -100,
+    ease: "power1",
+    duration: 2,
+  });
+};
+
 // const main = ref();
 // const ctx = ref();
 
@@ -46,12 +55,37 @@ const filteredProjects = computed(() => {
 </script>
 
 <template>
-  <div id="list" ref="main">
-    <ProjectItemVue
-      v-for="project in filteredProjects"
-      :key="project.title"
-      :project="project"
-      id="project"
-    ></ProjectItemVue>
+  <div class="col-start-2 col-span-1">
+    <transition appear @enter="enter" :css="false">
+      <header
+        id="intro"
+        class="grid grid-cols-12 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-raleway font-semibold mb-16"
+      >
+        <div class="col-span-full xl:col-span-11 3xl:col-span-8 leading-snug">
+          My name is Samantha. I am a
+          <span
+            class="bg-gradient-to-b from-gray-400 to-gray-500 bg-clip-text text-transparent"
+            >Design Engineer</span
+          >
+          based in London and I want to
+          <span
+            class="bg-gradient-to-b from-gray-400 to-gray-500 bg-clip-text text-transparent"
+            >design seamless, delightful user experiences</span
+          >
+          and create the world's most valuable products.
+        </div>
+      </header>
+    </transition>
+    <h1 class="tracking-widest text-xs font-semibold mb-6">
+      FEATURED PROJECTS
+    </h1>
+    <div id="list" ref="main">
+      <ProjectItemVue
+        v-for="project in filteredProjects"
+        :key="project.title"
+        :project="project"
+        id="project"
+      ></ProjectItemVue>
+    </div>
   </div>
 </template>
