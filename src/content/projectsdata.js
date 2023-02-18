@@ -7,6 +7,7 @@ const projects = [
         "Built the front-end of a real-time environmental monitoring portal using Vue.js and Tailwind.css. A user-centred design process was used to design the user experience of the portal and thus its user interface. I built Atmo’s first design system following Material Design guidelines, using “design tokens” to store and use styles across designs, code, tools and platforms.",
       imageSrc: new URL("../assets/atmo-hero-3.png", import.meta.url).href,
       imageAlt: "hot air balloon festival",
+      shortTitle: "Atmo",
     },
     {
       title: "Smart Gym Mobile App Design",
@@ -16,6 +17,7 @@ const projects = [
         "Disrupting the personal fitness industry by personlising your gym workout with your very own personal trainer. I designed the user experience and user interface of a smart gym mobile application. Functionality requirements were translated into an interactive, high-fidelity prototype, complete with micro-animations.",
       imageSrc: new URL("../assets/stance-mockup-1.png", import.meta.url).href,
       imageAlt: "hot air balloon festival",
+      shortTitle: "Stance",
     },
     {
       title: "Juno Circular Toy Company",
@@ -31,6 +33,7 @@ const projects = [
         "A circular business model to address the wasteful nature of the children’s toy market. A systems design approach was used to identify and close waste streams within the lifecycle of a children’s toy, then a human-centred design approach was used to propose a design for toy sharing product-service system.",
       imageSrc: new URL("../assets/juno-hero.jpg", import.meta.url).href,
       imageAlt: "hot air balloon festival",
+      shortTitle: "Juno",
     },
     {
       title: "Carbon Zero Home",
@@ -40,6 +43,7 @@ const projects = [
         "The engineering design of retrofit interventions to deliver carbon neutral performance in a Victorian-style mews.",
       imageSrc: new URL("../assets/frontcut-cnh.jpg", import.meta.url).href,
       imageAlt: "hot air balloon festival",
+      shortTitle: "carbon-zero-home",
     },
     {
       title: "Ergonomic Electric Wine Bottle Opener",
@@ -54,6 +58,7 @@ const projects = [
         "An accessible electric wine bottle opener, designed for aging consumers. A human-centred design approach was used to synthesise design requirements, and a commercially viable product was proposed to fit within an existing product offering of a company of our choice. Materials an manufacturing techniques were carefully considered and specified in a production-ready data package which detailed the full assembly process, components, tolerances, fits, and colours, materials and finishes (CMF).",
       imageSrc: new URL("../assets/wine-opener-hero.jpg", import.meta.url).href,
       imageAlt: "hot air balloon festival",
+      shortTitle: "ergonomic-wine-bottle-opener",
     },
     {
       title: "A Lightweight Tandem Bicycle Frame",
@@ -63,6 +68,7 @@ const projects = [
         "A lightweight tandem bicycle frame design, tested and optimised using finite element analysis. Finite element analysis was used to identify areas in the solid structure susceptible to failure from stress, so that adequate support may be applied to those areas and unnecessary material removed in non-stress intensive areas to reduce mass.",
       imageSrc: new URL("../assets/FEA-hero.jpg", import.meta.url).href,
       imageAlt: "hot air balloon festival",
+      shortTitle: "tandem-bike",
     },
   ];
 

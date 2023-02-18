@@ -1,7 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/Home.vue";
 import ProjectGalleryView from "../views/ProjectGallery.vue";
-import AtmoView from "../views/Projects/Atmo.vue";
 import StanceView from "../views/Projects/Stance.vue";
 
 const router = createRouter({
@@ -17,6 +16,16 @@ const router = createRouter({
       path: "/projects",
       name: "projects",
       component: ProjectGalleryView,
+    },
+    {
+      path: "/projects/Atmo",
+      name: "Atmo",
+      component: () => import("../views/Projects/Atmo.vue"),
+    },
+    {
+      path: "/projects/Stance",
+      name: "Stance",
+      component: () => import("../views/Projects/Stance.vue"),
     },
     {
       path: "/ux",
@@ -54,8 +63,6 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import("../views/Contact.vue"),
     },
-    { path: "/projects/Atmo", name: "Atmo", component: AtmoView },
-    { path: "/projects/Stance", name: "Stance", component: StanceView },
   ],
 });
 

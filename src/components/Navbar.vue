@@ -1,6 +1,7 @@
 <script setup>
 import NavbarLink from "./NavbarLink.vue";
 import { useFilterStore } from "../stores/filter";
+import { RouterLink } from "vue-router";
 
 const store = useFilterStore();
 </script>
@@ -8,7 +9,7 @@ const store = useFilterStore();
 <template>
   <div>
     <div class="flex items-center w-full">
-      <NavbarLink
+      <RouterLink
         to="/"
         class="p-1 bg-gradient-to-bl from-pink-300 via-orange-200 to-cyan-500 rounded-full mr-auto"
       >
@@ -19,8 +20,9 @@ const store = useFilterStore();
             alt="avatar"
           />
         </div>
-      </NavbarLink>
-      <div class="hidden lg:block lg:space-x-20">
+      </RouterLink>
+      <div class="hidden lg:block lg:space-x-10">
+        <NavbarLink to="/">Home</NavbarLink>
         <NavbarLink to="/projects">Work</NavbarLink>
         <NavbarLink to="/cv">CV</NavbarLink>
       </div>
