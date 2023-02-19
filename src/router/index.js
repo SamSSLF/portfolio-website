@@ -28,6 +28,16 @@ const router = createRouter({
       component: () => import("../views/Projects/Stance.vue"),
     },
     {
+      path: "/projects/carbon-zero-home",
+      name: "Carbon-Zero-Home",
+      component: () => import("../views/Projects/CarbonZeroHome.vue"),
+    },
+    {
+      path: "/projects/tandem-bike",
+      name: "Tandem-Bike",
+      component: () => import("../views/Projects/TandemBike.vue"),
+    },
+    {
       path: "/ux",
       name: "ux",
       component: HomeView,
