@@ -25,7 +25,7 @@ const props = defineProps({
         </slot>
       </div>
     </RouterLink>
-    <div class="lg:col-span-5 xl:mt-0 xl:col-span-4">
+    <div class="lg:col-span-5 xl:mt-0 xl:col-span-4 mt-4 md:mt-6">
       <RouterLink
         :to="'/projects/' + project.shortTitle"
         class="text-xl md:text-2xl 3xl:text-3xl font-raleway font-semibold text-gray-900 mb-2 hover:cursor-pointer"
