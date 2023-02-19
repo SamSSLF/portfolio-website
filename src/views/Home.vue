@@ -59,7 +59,7 @@ const enter = (el) => {
     <transition appear @enter="enter" :css="false">
       <header
         id="intro"
-        class="grid grid-cols-12 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-raleway font-semibold mb-16"
+        class="grid grid-cols-12 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-raleway font-semibold mb-10"
       >
         <div class="col-span-full xl:col-span-11 3xl:col-span-8 leading-snug">
           My name is Samantha. I am a
