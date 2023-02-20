@@ -1,5 +1,5 @@
 <script setup>
-import Modal from "../../components/modal.vue";
+import Modal from "../../components/Modal.vue";
 import { ref } from "vue";
 
 const isModalVisible = ref(true);
