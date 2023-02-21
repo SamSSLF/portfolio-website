@@ -5,6 +5,7 @@ import gsap from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useFilterStore } from "../stores/filter";
 import projects from "../content/projectsdata";
+import { RouterLink } from "vue-router";
 
 // gsap.registerPlugin(ScrollTrigger);
 
@@ -87,5 +88,25 @@ const enter = (el) => {
         id="project"
       ></ProjectItemVue>
     </div>
+    <RouterLink
+      to="/projects"
+      class="group flex justify-center items-center tracking-widest hover:tracking-[.25em] font-raleway text-sm text-gray-700 space-x-3 transition-all duration-600"
+    >
+      <p>browse all my work</p>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-6 h-6 hover:cursor-pointer text-gray-500 group-hover:translate-x-3 transition"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+        />
+      </svg>
+    </RouterLink>
   </div>
 </template>
