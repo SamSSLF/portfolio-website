@@ -81,7 +81,7 @@ const isModalVisible = ref(true);
       <h1>Information Architecture and Interaction Design</h1>
       <p>
         I began by scoping product requirements - what exactly do I need to
-        build? what is Atmo’s value proposition? what tasks do users want to
+        build? What is Atmo’s value proposition? What tasks do users want to
         accomplish on the portal? I collected information from various parts of
         the company, talking to engineers, sales, and clients to really
         understand the scope and scale of the product I was going to build.
