@@ -1,19 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/Home.vue";
 import ProjectGalleryView from "../views/ProjectGallery.vue";
-// import NotFound from "../components/NotFound.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   linkActiveClass: "text-black ",
   routes: [
-    // {
-    //   path: "*",
-    //   component: NotFound,
-    //   meta: {
-    //     requiresAuth: false,
-    //   },
-    // },
     {
       path: "/",
       name: "home",
