@@ -7,6 +7,8 @@ module.exports = {
         lora: ["Lora", "serif"],
         raleway: ["Raleway", "sans-serif"],
         roboto: ["Roboto Condensed", "sans-serif"],
+        blenny: ["Blenny", "serif"],
+        dapifer: ["Dapifer", "serif"],
       },
       screens: {
         "3xl": "2000px",
