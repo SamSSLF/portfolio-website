@@ -1,4 +1,181 @@
+<script>
+import RSVPForm from "../components/RSVPForm.vue";
+import { ref } from "vue";
+export default {
+  name: "Home",
+  components: {
+    RSVPForm,
+  },
+  setup() {
+    const modalActive = ref(false);
+    const formData = ref({
+      firstName: "",
+      lastName: "",
+      rsvp: "",
+      message: "",
+    });
+
+    function showModal() {
+      modalActive.value = true;
+    }
+
+    function closeModal() {
+      modalActive.value = false;
+    }
+
+    const submitForm = async (event) => {
+      event.preventDefault();
+
+      // Prepare the properties for the Notion API
+      const properties = {
+        "First Name": {
+          type: "title",
+          title: [
+            { type: "text", text: { content: formData.value.firstName } },
+          ],
+        },
+        "Last Name": {
+          type: "rich_text",
+          title: [{ type: "text", text: { content: formData.value.lastName } }],
+        },
+        RSVP: {
+          type: "select",
+          select: { name: formData.value.rsvp },
+        },
+        Message: {
+          type: "rich_text",
+          rich_text: [
+            { type: "text", text: { content: formData.value.message } },
+          ],
+        },
+      };
+
+      // Prepare the data for the Notion API
+      const data = {
+        parent: { database_id: import.meta.env.VITE_APP_NOTION_DATABASE_ID },
+        properties,
+      };
+      
+      const api_key = import.meta.env.VITE_APP_NOTION_API_KEY;
+      console.log(api_key);
+
+      // Send the data to the Notion API
+      const response = await fetch("https://api.notion.com/v1/pages", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${api_key}`,
+          "Notion-Version": "2022-06-28",
+        },
+        body: JSON.stringify(data),
+      });
+
+      // If the response is not OK, throw an error
+      if (!response.ok) {
+        throw new Error(response.statusText);
+      }
+
+      // Reset the form
+      formData.value = {
+        firstName: "",
+        lastName: "",
+        rsvp: "",
+        message: "",
+      };
+    };
+
+    return { modalActive, showModal, closeModal, formData, submitForm };
+  },
+};
+</script>
+
 <template>
+  <RSVPForm :modalActive="modalActive" @close="closeModal">
+    <div class="flex flex-col justify-center space-y-5 px-8">
+      <div class="space-y-1">
+        <h1 class="text-4xl font-blenny text-left text-amber-900">
+          RSVP To Picnic
+        </h1>
+        <h3 class="font-medium font-dapifer text-amber-900 text-left">
+          To edit RSVP, simply enter your details again to overwrite your
+          previous response.
+        </h3>
+      </div>
+      <form @submit.prevent="submitForm">
+        <div class="flex flex-col space-y-5">
+          <div class="flex flex-col space-y-1">
+            <label class="text-amber-900 font-dapifer font-bold">
+              First Name
+            </label>
+            <input
+              type="text"
+              placeholder="First Name"
+              class="border-solid border-[1px] border-amber-900 rounded-lg px-4 py-2"
+              v-model="formData.firstName"
+            />
+          </div>
+          <div class="flex flex-col space-y-1">
+            <label class="text-amber-900 font-dapifer font-bold">
+              Last Name
+            </label>
+            <input
+              type="text"
+              placeholder="Last Name"
+              class="border-solid border-[1px] border-amber-900 rounded-lg px-4 py-2"
+              v-model="formData.lastName"
+            />
+          </div>
+          <div class="flex space-x-12">
+            <div class="flex flex-col space-y-1">
+              <label for="yes" class="text-amber-900 font-dapifer font-bold">
+                Yes
+              </label>
+              <input
+                id="yes"
+                value="yes"
+                type="radio"
+                name="rsvp"
+                class="border-solid border-[1px] border-amber-900 h-6 w-6"
+                v-model="formData.rsvp"
+              />
+            </div>
+            <div class="flex space-x-12">
+              <div class="flex flex-col space-y-1">
+                <label for="no" class="text-amber-900 font-dapifer font-bold">
+                  No
+                </label>
+                <input
+                  id="no"
+                  value="no"
+                  type="radio"
+                  name="rsvp"
+                  class="border-solid border-[1px] border-amber-900 h-6 w-6"
+                  v-model="formData.rsvp"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col space-y-1" v-if="formData.rsvp === 'no'">
+            <label class="text-amber-900 font-dapifer font-bold">
+              Message
+            </label>
+            <textarea
+              type="text"
+              placeholder="Excuses here"
+              class="border-solid border-[1px] border-amber-900 rounded-lg px-4 py-2 h-24"
+              v-model="formData.message"
+            />
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-amber-900 text-white text-lg font-dapifer font-bold rounded-lg px-4 py-2"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </RSVPForm>
   <div class="col-start-2">
     <div class="flex flex-col items-center space-y-4">
       <h3 class="text-2xl font-medium font-dapifer text-lime-700">
@@ -9,8 +186,15 @@
       </h1>
     </div>
     <div class="flex justify-center my-8">
-      <button
+      <!-- <button
         class="font-dapifer font-bold text-xl text-emerald-900 bg-emerald-300 px-8 py-2 rounded-full"
+      >
+        RSVP Now
+      </button> -->
+      <button
+        @click="showModal"
+        type="button"
+        class="font-dapifer font-bold text-xl text-emerald-900 bg-emerald-300 px-8 pt-2 pb-3 rounded-full"
       >
         RSVP Now
       </button>
@@ -20,7 +204,7 @@
     >
       <div class="col-span-1 space-y-4">
         <div
-          class="bg-white rounded-xl border-solid border-[1px] border-lime-600 p-6"
+          class="bg-white rounded-xl border-solid border-[1px] border-lime-600 p-6 sm:order-1"
         >
           <h2 class="text-emerald-900 text-bold text-3xl font-dapifer">
             Hello!
@@ -53,7 +237,7 @@
         </div>
 
         <div
-          class="col-span-1 col-start-1 h-fit bg-white rounded-xl border-solid border-[1px] border-lime-600 p-6"
+          class="col-span-1 col-start-1 h-fit bg-white rounded-xl border-solid border-[1px] border-lime-600 p-6 order-last"
         >
           <h2 class="text-emerald-900 text-bold text-3xl font-dapifer">
             Gifts
@@ -125,7 +309,8 @@
             Picnic Location
           </h2>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2480.278137542275!2d-0.15927142359474905!3d51.563134471825954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761a579efe189b%3A0xad66eadceabb06e!2sHighgate%20Men&#39;s%20Bathing%20Pond!5e0!3m2!1sen!2suk!4v1683834987522!5m2!1sen!2suk" class="w-full h-96"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2480.278137542275!2d-0.15927142359474905!3d51.563134471825954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761a579efe189b%3A0xad66eadceabb06e!2sHighgate%20Men&#39;s%20Bathing%20Pond!5e0!3m2!1sen!2suk!4v1683834987522!5m2!1sen!2suk"
+            class="w-full h-96"
             style="border: 0"
             allowfullscreen=""
             loading="lazy"

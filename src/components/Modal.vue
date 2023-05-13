@@ -24,6 +24,7 @@ const evaluate = (password) => {
     wrongPassword.value = true;
   }
 };
+
 </script>
 
 <template>
