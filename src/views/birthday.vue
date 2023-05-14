@@ -1,10 +1,12 @@
 <script>
 import RSVPForm from "../components/RSVPForm.vue";
 import { ref } from "vue";
+import AddToCalendar from "../components/AddToCalendar.vue";
 export default {
   name: "Home",
   components: {
     RSVPForm,
+    AddToCalendar,
   },
   setup() {
     const modalActive = ref(false);
@@ -56,24 +58,31 @@ export default {
         properties,
       };
 
-      // const api_key = import.meta.env.VITE_APP_NOTION_API_KEY;
+      const api_key = import.meta.env.VITE_APP_NOTION_API_KEY;
 
       // Send the data to the Notion API
-      axios
-        .post("http://localhost:3000/api/create-page", JSON.stringify(data))
-        .then((response) => {
-          console.log(response.data);
-          // Reset the form
-          formData.value = {
-            firstName: "",
-            lastName: "",
-            rsvp: "",
-            message: "",
-          };
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+      const response = await fetch("https://api.notion.com/v1/pages", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${api_key}`,
+          "Notion-Version": "2022-06-28",
+        },
+        body: JSON.stringify(data),
+      });
+
+      // If the response is not OK, throw an error
+      if (!response.ok) {
+        throw new Error(response.statusText);
+      }
+
+      // Reset the form
+      formData.value = {
+        firstName: "",
+        lastName: "",
+        rsvp: "",
+        message: "",
+      };
     };
 
     return { modalActive, showModal, closeModal, formData, submitForm };
@@ -183,13 +192,14 @@ export default {
       >
         RSVP Now
       </button> -->
-      <button
+      <!-- <button
         @click="showModal"
         type="button"
         class="font-dapifer font-bold text-xl text-emerald-900 bg-emerald-300 px-8 pt-2 pb-3 rounded-full"
       >
         RSVP Now
-      </button>
+      </button> -->
+      <AddToCalendar />
     </div>
     <div
       class="grid grid-cols-1 xl:grid-cols-3 gap-4 grid-flow-row-dense leading-loose text-lg"
