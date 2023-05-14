@@ -265,7 +265,7 @@ export default {
           <p class="font-dapifer font-medium text-emerald-900 mt-4">
             <b>Date: </b>Saturday, 10th June 2023 <br />
             <b>Time: </b>12-5pm <br />
-            <b>Location: </b>Highgate Men’s Bathing Pond, Hampstead Heath.
+            <b>Location: </b>Mixed Bathing Pond, Hampstead Heath.
             <br />
             <b>Bring: </b>Potluck, swimsuit and towel.
           </p>
@@ -311,7 +311,7 @@ export default {
             Picnic Location
           </h2>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2480.278137542275!2d-0.15927142359474905!3d51.563134471825954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761a579efe189b%3A0xad66eadceabb06e!2sHighgate%20Men&#39;s%20Bathing%20Pond!5e0!3m2!1sen!2suk!4v1683834987522!5m2!1sen!2suk"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2480.410379716249!2d-0.16884962359492492!3d51.56070997182545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761a579efe189b%3A0x647e10ee1b092e4c!2sMixed%20Bathing%20Pond!5e0!3m2!1sen!2suk!4v1684058169266!5m2!1sen!2suk"
             class="w-full h-96"
             style="border: 0"
             allowfullscreen=""
