@@ -55,33 +55,25 @@ export default {
         parent: { database_id: import.meta.env.VITE_APP_NOTION_DATABASE_ID },
         properties,
       };
-      
-      const api_key = import.meta.env.VITE_APP_NOTION_API_KEY;
-      console.log(api_key);
+
+      // const api_key = import.meta.env.VITE_APP_NOTION_API_KEY;
 
       // Send the data to the Notion API
-      const response = await fetch("https://api.notion.com/v1/pages", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${api_key}`,
-          "Notion-Version": "2022-06-28",
-        },
-        body: JSON.stringify(data),
-      });
-
-      // If the response is not OK, throw an error
-      if (!response.ok) {
-        throw new Error(response.statusText);
-      }
-
-      // Reset the form
-      formData.value = {
-        firstName: "",
-        lastName: "",
-        rsvp: "",
-        message: "",
-      };
+      axios
+        .post("http://localhost:3000/api/create-page", JSON.stringify(data))
+        .then((response) => {
+          console.log(response.data);
+          // Reset the form
+          formData.value = {
+            firstName: "",
+            lastName: "",
+            rsvp: "",
+            message: "",
+          };
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     };
 
     return { modalActive, showModal, closeModal, formData, submitForm };
