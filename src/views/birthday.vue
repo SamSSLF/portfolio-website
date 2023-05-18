@@ -45,7 +45,11 @@ export default {
         .oneOf(["yes", "no"], 'RSVP must be either "yes" or "no"'),
       mobileNumber: yup.string().when("rsvp", {
         is: (rsvp) => rsvp === "yes",
-        then: () => yup.string().required("Mobile number is required").min(10, "Please enter a valid mobile number"),
+        then: () =>
+          yup
+            .string()
+            .required("Mobile number is required")
+            .min(10, "Please enter a valid mobile number"),
         otherwise: () => yup.string().notRequired(),
       }),
       message: yup.string().notRequired(),
@@ -58,12 +62,12 @@ export default {
       // Send the data to the Notion API
       async function createPage() {
         try {
-          const response = await axios.post(
+          await axios.post(
             `https://sams-api.vercel.app/api/v1/notion/create-page`,
             formData.value
           );
 
-          console.log(response);
+          // console.log(response);
 
           closeModal();
 
