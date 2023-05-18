@@ -55,7 +55,7 @@ export default {
       message: yup.string().notRequired(),
     });
 
-    const submitForm = async () => {
+    function submitForm() {
       // event.preventDefault();
       // console.log(values);
 
@@ -84,7 +84,7 @@ export default {
         }
       }
       createPage();
-    };
+    }
 
     return {
       modalActive,
@@ -99,129 +99,135 @@ export default {
 </script>
 
 <template>
-  <RSVPForm :modalActive="modalActive" @close="closeModal">
-    <div class="flex flex-col justify-center space-y-5 px-8">
-      <div class="space-y-1">
-        <h1 class="text-4xl font-blenny text-left text-amber-900">
-          RSVP To Picnic
-        </h1>
-        <h3 class="font-medium font-dapifer text-amber-900 text-left">
-          To edit RSVP, simply enter your details again to overwrite your
-          previous response.
-        </h3>
-      </div>
-      <VeeForm
-        v-slot="{ handleSubmit, validate }"
-        :validation-schema="schema"
-        as="div"
-      >
-        <form @submit="handleSubmit($event, submitForm)">
-          <div class="flex flex-col space-y-5 mb-8">
-            <div class="flex flex-col space-y-1">
-              <label class="text-amber-900 font-dapifer font-bold">
-                First Name
-              </label>
-              <Field
-                name="firstName"
-                type="text"
-                class="border-solid border-[1px] border-amber-900 rounded-lg px-4 py-2"
-                placeholder="First Name"
-                v-model="formData.firstName"
-              />
-              <ErrorMessage class="text-red-500" name="firstName" />
-            </div>
-            <div class="flex flex-col space-y-1">
-              <label class="text-amber-900 font-dapifer font-bold">
-                Last Name
-              </label>
-              <Field
-                name="lastName"
-                type="text"
-                placeholder="Last Name"
-                class="border-solid border-[1px] border-amber-900 rounded-lg px-4 py-2"
-                v-model="formData.lastName"
-              />
-              <ErrorMessage class="text-red-500" name="lastName" />
-            </div>
-            <div class="flex flex-col space-y-1">
-              <ErrorMessage class="text-red-500" name="rsvp" />
-              <div class="flex space-x-12">
-                <div class="flex flex-col space-y-1">
-                  <label
-                    for="yes"
-                    class="text-amber-900 font-dapifer font-bold"
-                  >
-                    Yes
-                  </label>
-                  <Field
-                    id="yes"
-                    value="yes"
-                    type="radio"
-                    name="rsvp"
-                    class="border-solid border-[1px] border-amber-900 h-6 w-6"
-                    v-model="formData.rsvp"
-                  />
-                </div>
+  <div class="col-start-2">
+    <RSVPForm :modalActive="modalActive" @close="closeModal">
+      <div class="flex flex-col justify-center space-y-5 px-8">
+        <div class="space-y-1">
+          <h1 class="text-4xl font-blenny text-left text-amber-900">
+            RSVP To Picnic
+          </h1>
+          <h3 class="font-medium font-dapifer text-amber-900 text-left">
+            To edit RSVP, simply enter your details again to overwrite your
+            previous response.
+          </h3>
+        </div>
+        <VeeForm
+          v-slot="{ handleSubmit, validate }"
+          :validation-schema="schema"
+          as="div"
+        >
+          <form @submit="handleSubmit($event, submitForm)">
+            <div class="flex flex-col space-y-5 mb-8">
+              <div class="flex flex-col space-y-1">
+                <label class="text-amber-900 font-dapifer font-bold">
+                  First Name
+                </label>
+                <Field
+                  name="firstName"
+                  type="text"
+                  class="border-solid border-[1px] border-amber-900 rounded-lg px-4 py-2"
+                  placeholder="First Name"
+                  v-model="formData.firstName"
+                />
+                <ErrorMessage class="text-red-500" name="firstName" />
+              </div>
+              <div class="flex flex-col space-y-1">
+                <label class="text-amber-900 font-dapifer font-bold">
+                  Last Name
+                </label>
+                <Field
+                  name="lastName"
+                  type="text"
+                  placeholder="Last Name"
+                  class="border-solid border-[1px] border-amber-900 rounded-lg px-4 py-2"
+                  v-model="formData.lastName"
+                />
+                <ErrorMessage class="text-red-500" name="lastName" />
+              </div>
+              <div class="flex flex-col space-y-1">
+                <ErrorMessage class="text-red-500" name="rsvp" />
                 <div class="flex space-x-12">
                   <div class="flex flex-col space-y-1">
                     <label
-                      for="no"
+                      for="yes"
                       class="text-amber-900 font-dapifer font-bold"
                     >
-                      No
+                      Yes
                     </label>
                     <Field
-                      id="no"
-                      value="no"
+                      id="yes"
+                      value="yes"
                       type="radio"
                       name="rsvp"
                       class="border-solid border-[1px] border-amber-900 h-6 w-6"
                       v-model="formData.rsvp"
                     />
                   </div>
+                  <div class="flex space-x-12">
+                    <div class="flex flex-col space-y-1">
+                      <label
+                        for="no"
+                        class="text-amber-900 font-dapifer font-bold"
+                      >
+                        No
+                      </label>
+                      <Field
+                        id="no"
+                        value="no"
+                        type="radio"
+                        name="rsvp"
+                        class="border-solid border-[1px] border-amber-900 h-6 w-6"
+                        v-model="formData.rsvp"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="flex flex-col space-y-1" v-if="formData.rsvp === 'no'">
-              <label class="text-amber-900 font-dapifer font-bold">
-                Message
-              </label>
-              <Field
-                name="message "
-                as="textarea"
-                placeholder="Excuses here"
-                class="border-solid border-[1px] border-amber-900 rounded-lg px-4 py-2 h-24"
-                v-model="formData.message"
-              />
-              <ErrorMessage class="text-red-500" name="message" />
+              <div
+                class="flex flex-col space-y-1"
+                v-if="formData.rsvp === 'no'"
+              >
+                <label class="text-amber-900 font-dapifer font-bold">
+                  Message
+                </label>
+                <Field
+                  name="message "
+                  as="textarea"
+                  placeholder="Excuses here"
+                  class="border-solid border-[1px] border-amber-900 rounded-lg px-4 py-2 h-24"
+                  v-model="formData.message"
+                />
+                <ErrorMessage class="text-red-500" name="message" />
+              </div>
+              <div
+                class="flex flex-col space-y-1"
+                v-if="formData.rsvp === 'yes'"
+              >
+                <label class="text-amber-900 font-dapifer font-bold">
+                  WhatsApp Mobile Number
+                </label>
+                <Field
+                  name="mobileNumber"
+                  type="text"
+                  placeholder="+441234567890"
+                  class="border-solid border-[1px] border-amber-900 rounded-lg px-4 py-2"
+                  v-model="formData.mobileNumber"
+                />
+                <ErrorMessage class="text-red-500" name="mobileNumber" />
+              </div>
             </div>
-            <div class="flex flex-col space-y-1" v-if="formData.rsvp === 'yes'">
-              <label class="text-amber-900 font-dapifer font-bold">
-                WhatsApp Mobile Number
-              </label>
-              <Field
-                name="mobileNumber"
-                type="text"
-                placeholder="+441234567890"
-                class="border-solid border-[1px] border-amber-900 rounded-lg px-4 py-2"
-                v-model="formData.mobileNumber"
-              />
-              <ErrorMessage class="text-red-500" name="mobileNumber" />
-            </div>
-          </div>
-          <button
-            @click="validate"
-            type="submit"
-            class="w-full bg-amber-900 text-white text-lg font-dapifer font-bold rounded-lg px-4 py-2"
-          >
-            Submit
-          </button>
-        </form>
-      </VeeForm>
-    </div>
-  </RSVPForm>
-  <div class="col-start-2">
+            <button
+              @click="validate"
+              type="submit"
+              class="w-full bg-amber-900 text-white text-lg font-dapifer font-bold rounded-lg px-4 py-2"
+            >
+              Submit
+            </button>
+          </form>
+        </VeeForm>
+      </div>
+    </RSVPForm>
     <div class="flex flex-col items-center space-y-4">
       <h3 class="text-2xl font-medium font-dapifer text-lime-700">
         You're Invited To
