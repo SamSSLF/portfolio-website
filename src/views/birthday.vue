@@ -59,7 +59,7 @@ export default {
       async function createPage() {
         try {
           const response = await axios.post(
-            `http://localhost:3000/api/create-page`,
+            `https://sams-api.vercel.app/api/v1/notion/create-page`,
             formData.value
           );
 
