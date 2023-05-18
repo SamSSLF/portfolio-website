@@ -1,5 +1,6 @@
 <script>
 import RSVPForm from "../components/RSVPForm.vue";
+import { Spinner } from "flowbite-vue";
 import { ref } from "vue";
 import AddToCalendar from "../components/AddToCalendar.vue";
 import axios from "axios";
@@ -14,9 +15,12 @@ export default {
     VeeForm,
     Field,
     ErrorMessage,
+    Spinner,
   },
   setup() {
     const modalActive = ref(false);
+    const loading = ref(false);
+    const submitted =ref(false);
     const formData = ref({
       firstName: "",
       lastName: "",
@@ -56,6 +60,7 @@ export default {
     });
 
     function submitForm() {
+      loading.value = true;
       // event.preventDefault();
       // console.log(values);
 
@@ -69,7 +74,7 @@ export default {
 
           // console.log(response);
 
-          closeModal();
+          submitted.value = true;
 
           // clear form
           formData.value = {
@@ -79,6 +84,8 @@ export default {
             message: "",
             mobileNumber: " ",
           };
+
+          loading.value = false;
         } catch (error) {
           console.error("There was an error!", error);
         }
@@ -88,6 +95,8 @@ export default {
 
     return {
       modalActive,
+      loading,
+      submitted,
       showModal,
       closeModal,
       formData,
@@ -101,15 +110,15 @@ export default {
 <template>
   <div class="col-start-2">
     <RSVPForm :modalActive="modalActive" @close="closeModal">
-      <div class="flex flex-col justify-center space-y-5 px-8">
+      <div v-if="submitted" class="flex flex-col items-center space-y-5 px-8" >
+        <h3 class="font-dapifer text-amber-900 font-bold">RSVP submitted!</h3>
+        <AddToCalendar />
+      </div>
+      <div v-else class="flex flex-col justify-center space-y-5 px-8">
         <div class="space-y-1">
           <h1 class="text-4xl font-blenny text-left text-amber-900">
             RSVP To Picnic
           </h1>
-          <h3 class="font-medium font-dapifer text-amber-900 text-left">
-            To edit RSVP, simply enter your details again to overwrite your
-            previous response.
-          </h3>
         </div>
         <VeeForm
           v-slot="{ handleSubmit, validate }"
@@ -220,9 +229,11 @@ export default {
             <button
               @click="validate"
               type="submit"
-              class="w-full bg-amber-900 text-white text-lg font-dapifer font-bold rounded-lg px-4 py-2"
+              class="flex justify-center w-full bg-amber-900 text-white text-lg font-dapifer font-bold rounded-lg px-4 py-2"
+              :class="loading ? 'cursor-not-allowed' : ''"
             >
-              Submit
+              <Spinner v-if="loading" color="yellow" size="6" />
+              <span v-else >Submit</span>
             </button>
           </form>
         </VeeForm>
@@ -245,7 +256,7 @@ export default {
       <button
         @click="showModal"
         type="button"
-        class="font-dapifer font-bold text-xl text-emerald-900 bg-emerald-300 px-8 pt-2 pb-3 rounded-full"
+        class="hover:bg-emerald-900 hover:text-emerald-100 transition-colors font-dapifer font-bold text-xl text-emerald-900 bg-emerald-300 px-8 pt-2 pb-3 rounded-full"
       >
         RSVP Now
       </button>
