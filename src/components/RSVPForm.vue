@@ -22,7 +22,7 @@ export default {
       <transition name="modal-animation-inner">
         <div
           v-show="modalActive"
-          class="relative max-w-xl w-1/4 bg-amber-50 py-10 px-4 rounded-xl shadow-xl"
+          class="relative w-[80%] xl:max-w-xl lg:w-1/2 xl:w-1/4 bg-amber-50 py-10 px-4 rounded-xl shadow-xl"
         >
           <div
             class="bg-amber-600 absolute top-[-1rem] right-[-1rem] rounded-full w-12 h-12 flex justify-center items-center"
