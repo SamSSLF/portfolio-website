@@ -68,12 +68,12 @@ const enter = (el) => {
             class="bg-gradient-to-b from-gray-400 to-gray-500 bg-clip-text text-transparent"
             >Design Engineer</span
           >
-          based in London and I want to
+          who is passionate about
           <span
             class="bg-gradient-to-b from-gray-400 to-gray-500 bg-clip-text text-transparent"
-            >design seamless, delightful user experiences</span
+            >creating seamless, delightful user experiences.</span
           >
-          and create the world's most valuable products.
+          I love making things, here are some of them.
         </div>
       </header>
     </transition>
