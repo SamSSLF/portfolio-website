@@ -13,7 +13,7 @@
         </a>
       </div>
       <div class="mt-8 md:order-2 md:mt-8">
-        <p class="text-center md:text-left text-xs text-gray-400">
+        <p class="text-center text-xs text-gray-400">
           &copy; Samantha Foong 2023. All rights reserved. This entire website
           was developed by me using Vue.js and Tailwind CSS with Vite.
         </p>
