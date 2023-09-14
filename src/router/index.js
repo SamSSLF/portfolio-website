@@ -50,6 +50,26 @@ const router = createRouter({
           component: () => import("../views/Projects/TandemBike.vue"),
         },
         {
+          path: "/projects/ergonomic-wine-bottle-opener",
+          name: "Aarke Wine Bottle Opener",
+          component: () => import("../views/Projects/Aarke.vue"),
+        },
+        {
+          path: "/projects/fable",
+          name: "Fable Language-Learning Toy",
+          component: () => import("../views/Projects/Fable.vue"),
+        },
+        {
+          path: "/projects/terraqi",
+          name: "TerraQi API",
+          component: () => import("../views/Projects/TerraQi.vue"),
+        },
+        {
+          path: "/projects/juno",
+          name: "Juno Circular Toy Company",
+          component: () => import("../views/Projects/Juno.vue"),
+        },
+        {
           path: "/ux",
           name: "ux",
           component: HomeView,
