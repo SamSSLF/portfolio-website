@@ -73,7 +73,7 @@ const enter = (el) => {
             class="bg-gradient-to-b from-gray-400 to-gray-500 bg-clip-text text-transparent"
             >creating seamless, delightful user experiences.</span
           >
-          I love making things, here are some of them.
+          I love making things, here are some of those things.
         </div>
       </header>
     </transition>
