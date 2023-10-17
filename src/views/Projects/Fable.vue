@@ -30,13 +30,17 @@
     </h3>
     <div class="flex flex-col space-y-2">
       <div><span class="font-bold">Time Frame: </span>5 weeks</div>
-      <div><span class="font-bold"> Team: </span>
-      Paula Castillero, Kyle Li, Irina Barzykina, Anna Soligo and myself.</div>
-      
-      <div><span class="font-bold"> Role: </span>I was responsible for the initial
-      concept development, user research, user testing, user interface design,
-      and design psychology research for development. I am the sole author of
-      the proposed research study to test the toy's efficacy empirically.</div>
+      <div>
+        <span class="font-bold"> Team: </span> Paula Castillero, Kyle Li, Irina
+        Barzykina, Anna Soligo and myself.
+      </div>
+
+      <div>
+        <span class="font-bold"> Role: </span>I was responsible for the initial
+        concept development, user research, user testing, user interface design,
+        and design psychology research for development. I am the sole author of
+        the proposed research study to test the toy's efficacy empirically.
+      </div>
     </div>
   </article>
 
@@ -110,10 +114,9 @@
     </ul>
   </article>
   <article
-  class="mb-2 col-start-2 col-span-1 prose prose-h1:text-4xl prose-h1:font-bold prose-h1:mb-2 prose-h1:mt-10 prose-p:prose-md prose-h3:font-normal prose-h4:mb-3"
->
-  <h1>Research and Analysis</h1>
-  <h2>User Research</h2>
-  
-</article>
+    class="mb-2 col-start-2 col-span-1 prose prose-h1:text-4xl prose-h1:font-bold prose-h1:mb-2 prose-h1:mt-10 prose-p:prose-md prose-h3:font-normal prose-h4:mb-3"
+  >
+    <h1>Research and Analysis</h1>
+    <h2>User Research</h2>
+  </article>
 </template>
