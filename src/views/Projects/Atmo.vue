@@ -11,7 +11,7 @@ const isModalVisible = ref(true);
 
 <template>
   <div class="col-start-2 col-span-1">
-    <Modal v-show="isModalVisible"></Modal>
+    <!-- <Modal v-show="isModalVisible"></Modal> -->
     <article
       class="prose prose-h1:text-4xl prose-h1:font-bold prose-h1:mb-2 prose-h1:mt-10 prose-p:prose-md prose-h3:font-normal prose-h4:mb-3"
     >
