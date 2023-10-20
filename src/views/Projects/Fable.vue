@@ -9,6 +9,25 @@ onMounted(() => {
 </script>
 
 <template>
+  <article
+    class="col-start-2 col-span-1 prose prose-h1:text-4xl prose-h1:font-bold prose-h1:mb-2 prose-p:prose-md prose-h3:font-normal"
+  >
+    <h1>Fable - A scientifically-backed language-learning toy.</h1>
+    <h3 class="mb-4">
+      Fable is a digital-physical toy which aims to improve second language
+      proficiency by leveraging established principles in developmental
+      psychology.
+    </h3>
+    <h3 class="mb-8">
+      The toy is underpinned by Bandura’s theory of self-efficacy, and current
+      theories on intellectual development across the lifespan. An initial
+      prototype was developed and tested with potential users and areas of
+      improvement were noted for future iterations. As part of my Design
+      Psychology module, an experimental design to test the toy’s claim that it
+      can improve second language proficiency is outlined in a report that can
+      be read here.
+    </h3>
+  </article>
   <img src="../../assets/fable-hero-4.png" alt="" class="col-span-full" />
   <p
     class="col-start-2 text-sm mt-3 mb-8 tracking-wide font-semibold text-slate-500"
@@ -19,32 +38,12 @@ onMounted(() => {
   <article
     class="col-start-2 col-span-1 prose prose-h1:text-4xl prose-h1:font-bold prose-h1:mb-2 prose-p:prose-md prose-h3:font-normal"
   >
-    <h1>
-      Fable - A language-learning toy that supports the development of
-      self-efficacy in children aged 3-7 years.
-    </h1>
-    <h3 class="mb-4">
-      Fable is a digital-physical toy which aims to improve second language
-      proficiency by leveraging self-efficacy theory (SET) as a mechanism that
-      could help explain why some children thrive learning a second language
-      whereas others struggle.
-    </h3>
-    <h3>
-      The toy is underpinned by Bandura’s theory of self-efficacy, and current
-      theories on intellectual development across the lifespan. An initial
-      prototype was developed and tested with potential users and areas of
-      improvement were noted for future iterations. As part of my Design
-      Psychology module, an experimental design to test the toy’s claim that it
-      can improve second language proficiency is outlined in a report that can
-      be read here.
-    </h3>
     <div class="flex flex-col space-y-2">
       <div><span class="font-bold">Time Frame: </span>5 weeks</div>
       <div>
         <span class="font-bold"> Team: </span> Paula Castillero, Kyle Li, Irina
         Barzykina, Anna Soligo and myself.
       </div>
-
       <div>
         <span class="font-bold"> Role: </span>I was responsible for the initial
         concept development, user research, user testing, user interface design,
@@ -293,7 +292,29 @@ onMounted(() => {
       Existing language learning toys were researched and summarised into the
       following graphic, which highlights an opportunity within this market.
     </p>
+    <p>
+      Between the ages of 2-7 years, children typically engage with toys that
+      incorporate symbolic representation, to help them expand their vocabulary
+      and improve their communciation skills. There are no toys however
+      specifically designed to support second-language acquisition during these
+      years, with language-specific toys typically being aimed at older
+      children.
+    </p>
+    <p class="mb-4">
+      There are also currently no toys offering a high level of personalised
+      learning at this stage of childhood development.
+    </p>
   </article>
+  <img src="../../assets/Fable_Toy_Market.jpg" alt="" class="col-span-full" />
+  <p
+    class="mb-6 col-start-2 text-sm mt-3 tracking-wide font-semibold text-slate-500"
+  >
+    A 2x2 matrix depicting existing language-related educational toys for
+    children between the ages of 0 to 11. The Y-axis represents the relative
+    degree of personalisation available for each toy. Symbolic representation is
+    typical of toys for children between the ages of 2-7 years, while
+    language-learning specific toys are typically aimed at older children.
+  </p>
   <article
     class="mb-2 col-start-2 col-span-1 prose prose-h1:text-4xl prose-h1:font-bold prose-h1:mb-2 prose-h1:mt-10 prose-p:prose-md prose-h3:font-normal prose-h4:mb-3"
   >
@@ -305,6 +326,45 @@ onMounted(() => {
       concept which the team ended up selecting to take further.
     </p>
   </article>
+  <img
+    src="../../assets/Fable_initial_concept1.png"
+    alt=""
+    class="col-span-full"
+  />
+  <p
+    class="mb-6 col-start-2 text-sm mt-3 tracking-wide font-semibold text-slate-500"
+  >
+    I first thought about using role play and storytelling as tools for language
+    acquisition. The idea is that children would learn passively as they play
+    more and more with the toy, incorporating the foreign-language nouns into
+    their storytelling. This concept is consistent with using symbolic
+    representation to teach language, which is typical of toys for children
+    between the ages of 2-7 years.
+  </p>
+  <img
+    src="../../assets/Fable_initial_concept2.png"
+    alt=""
+    class="col-span-full"
+  />
+  <p
+    class="mb-6 col-start-2 text-sm mt-3 tracking-wide font-semibold text-slate-500"
+  >
+    Electronic flashcards aready exist on the market, I upgraded the idea
+    slightly to include buttons for verbs and adjectives related to the noun, so
+    children may start to develop stories around the character (the noun) in a
+    foreign language.
+  </p>
+  <img
+    src="../../assets/Fable_initial_concept3.png"
+    alt=""
+    class="col-span-full"
+  />
+  <p
+    class="mb-6 col-start-2 text-sm mt-3 tracking-wide font-semibold text-slate-500"
+  >
+    Finally the idea of using a character to teach language was developed into a
+    board-like game, each tile includes an electronic touch screen which can play animations and afford interactive mini games to be played.
+  </p>
   <article
     class="mb-2 col-start-2 col-span-1 prose prose-h1:text-4xl prose-h1:font-bold prose-h1:mb-2 prose-h1:mt-10 prose-p:prose-md prose-h3:font-normal prose-h4:mb-3"
   >
@@ -321,16 +381,12 @@ onMounted(() => {
     class="mb-2 col-start-2 col-span-1 prose prose-h1:text-4xl prose-h1:font-bold prose-h1:mb-2 prose-h1:mt-10 prose-p:prose-md prose-h3:font-normal prose-h4:mb-3"
   >
     <h2>User Testing</h2>
-    <p>
-      I conducted user testing with two children aged 6 and 8 years old.
-    </p>
+    <p>I conducted user testing with two children aged 6 and 8 years old.</p>
   </article>
   <article
     class="mb-2 col-start-2 col-span-1 prose prose-h1:text-4xl prose-h1:font-bold prose-h1:mb-2 prose-h1:mt-10 prose-p:prose-md prose-h3:font-normal prose-h4:mb-3"
   >
     <h1>Proposed Method of Testing the Toy's Claims</h1>
-    <p>
-      Summary of the report insert here.
-    </p>
+    <p>Summary of the report insert here.</p>
   </article>
 </template>
