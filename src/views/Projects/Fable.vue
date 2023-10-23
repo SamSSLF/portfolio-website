@@ -14,8 +14,8 @@ onMounted(() => {
   >
     <h1>Fable - A scientifically-backed language-learning toy.</h1>
     <h3 class="mb-4">
-      Fable is a digital-physical toy which aims to improve second language
-      proficiency by leveraging established principles in developmental
+      Fable is a digital-physical toy which supports young children in second
+      language learning by leveraging established principles in developmental
       psychology.
     </h3>
     <h3 class="mb-8">
@@ -363,7 +363,245 @@ onMounted(() => {
     class="mb-6 col-start-2 text-sm mt-3 tracking-wide font-semibold text-slate-500"
   >
     Finally the idea of using a character to teach language was developed into a
-    board-like game, each tile includes an electronic touch screen which can play animations and afford interactive mini games to be played.
+    board-like game, each tile includes an electronic touch screen which can
+    play animations and afford interactive mini games to be played.
+  </p>
+  <!--Carousel Start-->
+  <div class="col-span-full">
+    <div id="default-carousel" class="relative w-full" data-carousel="static">
+      <!-- Carousel wrapper -->
+      <div class="relative overflow-hidden rounded-lg aspect-w-16 aspect-h-9">
+        <!-- Item 1 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="../../assets/Fable_Design_Slide1.png"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
+        <!-- Item 2 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="../../assets/Fable_Design_Slide2.png"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
+        <!-- Item 3 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="../../assets/Fable_Design_Slide3.png"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
+        <!-- Item 4 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="../../assets/Fable_Design_Slide4.png"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
+        <!-- Item 5 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="../../assets/Fable_Design_Slide5.png"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
+        <!-- Item 6 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="../../assets/Fable_Design_Slide6.png"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
+        <!-- Item 7 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="../../assets/Fable_Design_Slide7.png"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
+        <!-- Item 8 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="../../assets/Fable_Design_Slide8.png"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
+        <!-- Item 9 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="../../assets/Fable_Design_Slide9.png"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
+        <!-- Item 10 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="../../assets/Fable_Design_Slide10.png"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
+        <!-- Item 11 -->
+        <div class="hidden duration-700 ease-in-out" data-carousel-item>
+          <img
+            src="../../assets/Fable_Design_Slide11.png"
+            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+            alt="..."
+          />
+        </div>
+      </div>
+      <!-- Slider indicators -->
+      <div
+        class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2"
+      >
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full bg-black/10 hover:bg-black/50 active:bg-black/70 focus:ring-4"
+          aria-current="true"
+          aria-label="Slide 1"
+          data-carousel-slide-to="0"
+        ></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full bg-black/10 hover:bg-black/50 active:bg-black/70 focus:ring-4"
+          aria-current="false"
+          aria-label="Slide 2"
+          data-carousel-slide-to="1"
+        ></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full bg-black/10 hover:bg-black/50 active:bg-black/70 focus:ring-4"
+          aria-current="false"
+          aria-label="Slide 3"
+          data-carousel-slide-to="2"
+        ></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full bg-black/10 hover:bg-black/50 active:bg-black/70 focus:ring-4"
+          aria-current="false"
+          aria-label="Slide 4"
+          data-carousel-slide-to="3"
+        ></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full bg-black/10 hover:bg-black/50 active:bg-black/70 focus:ring-4"
+          aria-current="false"
+          aria-label="Slide 5"
+          data-carousel-slide-to="4"
+        ></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full bg-black/10 hover:bg-black/50 active:bg-black/70 focus:ring-4"
+          aria-current="false"
+          aria-label="Slide 6"
+          data-carousel-slide-to="5"
+        ></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full bg-black/10 hover:bg-black/50 active:bg-black/70 focus:ring-4"
+          aria-current="false"
+          aria-label="Slide 7"
+          data-carousel-slide-to="6"
+        ></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full bg-black/10 hover:bg-black/50 active:bg-black/70 focus:ring-4"
+          aria-current="false"
+          aria-label="Slide 8"
+          data-carousel-slide-to="7"
+        ></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full bg-black/10 hover:bg-black/50 active:bg-black/70 focus:ring-4"
+          aria-current="false"
+          aria-label="Slide 9"
+          data-carousel-slide-to="8"
+        ></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full bg-black/10 hover:bg-black/50 active:bg-black/70 focus:ring-4"
+          aria-current="false"
+          aria-label="Slide 10"
+          data-carousel-slide-to="9"
+        ></button>
+        <button
+          type="button"
+          class="w-3 h-3 rounded-full bg-black/10 hover:bg-black/50 active:bg-black/70 focus:ring-4"
+          aria-current="false"
+          aria-label="Slide 11"
+          data-carousel-slide-to="10"
+        ></button>
+      </div>
+      <!-- Slider controls -->
+      <button
+        type="button"
+        class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-prev
+      >
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-800/30 group-hover:bg-gray-600/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none"
+        >
+          <svg
+            class="w-4 h-4 text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 1 1 5l4 4"
+            />
+          </svg>
+          <span class="sr-only">Previous</span>
+        </span>
+      </button>
+      <button
+        type="button"
+        class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-next
+      >
+        <span
+          class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gray-800/30 group-hover:bg-gray-600/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none"
+        >
+          <svg
+            class="w-4 h-4 text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 9 4-4-4-4"
+            />
+          </svg>
+          <span class="sr-only">Next</span>
+        </span>
+      </button>
+    </div>
+  </div>
+  <!--Carousel End-->
+  <p
+    class="mb-6 col-start-2 text-sm mt-3 tracking-wide font-semibold text-slate-500"
+  >
+    A walkthrough of the final game design I developed.
   </p>
   <article
     class="mb-2 col-start-2 col-span-1 prose prose-h1:text-4xl prose-h1:font-bold prose-h1:mb-2 prose-h1:mt-10 prose-p:prose-md prose-h3:font-normal prose-h4:mb-3"
@@ -373,20 +611,161 @@ onMounted(() => {
       A physical prototype of the final design was developed for user testing,
       coupled with a high fidelity prototype of the companion app so we could
       test the user experience with children. A digital prototype was also
-      created to ensure all the electronic components could fit into the
-      proposed design for the casing.
+      created to illustrate that the design was technically feasible.
     </p>
   </article>
+  <img
+    src="../../assets/Fable_Physical_Prototype.png"
+    alt=""
+    class="col-span-full"
+  />
+  <p
+    class="mb-6 col-start-2 text-sm mt-3 tracking-wide font-semibold text-slate-500"
+  >
+    Anna created a feels-like physical prototype by laser cutting multiple
+    acrylic sheets and stacking them. The tiles click together with the help of
+    magnets, embedded into the edges of the tiles.
+  </p>
+  <div class="col-span-full aspect-w-16 aspect-h-9">
+    <iframe
+      style="border: 1px solid rgba(0, 0, 0, 0.1)"
+      width="100%"
+      height="100%"
+      src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F9FhSM0f2NSv42NW2WKmnbJ%2FMobile-Device-Prototypes%3Fpage-id%3D0%253A1%26type%3Ddesign%26node-id%3D15-28%26viewport%3D-32%252C199%252C0.53%26t%3DsyUlW0fc5uxPHbpW-1%26scaling%3Dscale-down%26starting-point-node-id%3D15%253A28%26show-proto-sidebar%3D1%26mode%3Ddesign"
+      allowfullscreen
+    ></iframe>
+  </div>
+  <p
+    class="mb-6 col-start-2 text-sm mt-3 tracking-wide font-semibold text-slate-500"
+  >
+    Digital prototype of Fable and its features I created.
+  </p>
+  <img
+    src="../../assets/Fable_Technical_Feasibility1.png"
+    alt=""
+    class="col-span-full"
+  />
+  <p
+    class="mb-6 col-start-2 text-sm mt-3 tracking-wide font-semibold text-slate-500"
+  >
+    A rough digital prototype of all the necessary electronic components within
+    the Play Tiles to illustrate the design's feasibility created by Kyle.
+  </p>
+  <img
+    src="../../assets/Fable_Technical_Feasibility2.png"
+    alt=""
+    class="col-span-full"
+  />
+  <p
+    class="mb-6 col-start-2 text-sm mt-3 tracking-wide font-semibold text-slate-500"
+  >
+    A rough digital prototype of all the necessary electronic components within
+    the Start Tiles to illustrate the design's feasibility created by Kyle.
+  </p>
+
   <article
     class="mb-2 col-start-2 col-span-1 prose prose-h1:text-4xl prose-h1:font-bold prose-h1:mb-2 prose-h1:mt-10 prose-p:prose-md prose-h3:font-normal prose-h4:mb-3"
   >
     <h2>User Testing</h2>
-    <p>I conducted user testing with two children aged 6 and 8 years old.</p>
+    <p>
+      I conducted user testing with children between the ages of 5 and 11 years
+      old with the following aims:
+    </p>
+    <ol class="text-base">
+      <li>
+        Determine how effectively the game captures and maintains the children's
+        attention.
+      </li>
+      <li>
+        Understand how the storytelling aspect contributes to contextual
+        learning.
+      </li>
+      <li>
+        Examine the parent-child interation by observing the dynamics of
+        parent-child reading sessions, and gather insight on how the game
+        facilitates bonding and cooperative learning.
+      </li>
+      <li>Assess the appeal of AI-generated stories to adults and children.</li>
+    </ol>
+  </article>
+  <img
+    src="../../assets/Fable_User_testing_blurred.png"
+    alt=""
+    class="col-span-full"
+  />
+  <p
+    class="mb-6 col-start-2 text-sm mt-3 tracking-wide font-semibold text-slate-500"
+  >
+    A user testing session carried out with two children aged 6 and ll years,
+    and their father. Each child interacted with the high-fidelity figma
+    prototype, following on-screen instructions and playing with the tile
+    prototypes and solving the puzzles under parental supervision.
+  </p>
+  <article
+    class="mb-2 col-start-2 col-span-1 prose prose-h1:text-4xl prose-h1:font-bold prose-h1:mb-2 prose-h1:mt-10 prose-p:prose-md prose-h3:font-normal prose-h4:mb-3"
+  >
+    <p>The user testing sessions yielded the following learnings.</p>
+    <h4>Positive Points:</h4>
+    <ul class="text-base">
+      <li>
+        Dynamic difficulty is an important feature for the game to have as
+        second-language proficiency was not necessarily correlated with the age
+        of the child, each child requiring more or less help with certain
+        puzzles depending on their contextual exposure to the language (purely
+        conversational or classroom-based).
+      </li>
+      <li>
+        The children and parents were intrigued by the AI-generated stories and
+        liked how the storyline is affected by the tile configuration. Some
+        parents found the stories strange, but children seemed to enjoy the
+        outlandish nature of them.
+      </li>
+      <li>
+        Parents were happy to get involved with helping their children read
+        words they were not familiar with and liked how the game targeted
+        exposure to words they may not usually hear in their daily life, and
+        help expand their vocabulary.
+      </li>
+      <li>Children LOVED the clicking magnetic tiles.</li>
+    </ul>
+    <h4>Areas of Improvement:</h4>
+    <ul class="text-base">
+      <li>
+        Many parents requested a "read-aloud" feature so children and parents
+        could verify the pronunciation of words independently.
+      </li>
+      <li>
+        The "hint" feature on its own was not enough for the children to figure
+        out the puzzle tiles, and they required assistance from their parents.
+      </li>
+      <li>
+        Many families weren't sure if they would reread the generated stories in
+        the library. One parent suggested a feature where children could attach
+        their own artwork to the story to make the learning process more
+        engaging.
+      </li>
+      <li>
+        Younger children struggled a lot reading the AI-generated stories
+        independently, highlighting the need for a voice narration of the
+        stories so children could listen to the stories independently.
+      </li>
+    </ul>
   </article>
   <article
     class="mb-2 col-start-2 col-span-1 prose prose-h1:text-4xl prose-h1:font-bold prose-h1:mb-2 prose-h1:mt-10 prose-p:prose-md prose-h3:font-normal prose-h4:mb-3"
   >
     <h1>Proposed Method of Testing the Toy's Claims</h1>
-    <p>Summary of the report insert here.</p>
+    <p>
+      You can read my full scientific report on how I planned on testing the
+      toy's effectiveness at helping young children learn a second-language.
+    </p>
   </article>
+  <div class="col-start-2">
+    <iframe
+      src="https://drive.google.com/file/d/1dL3jBwHZb90PTwfFc5-i-Jkk0CNZmihj/preview"
+      height="680"
+      allow="autoplay"
+      class="mt-4 w-full"
+    ></iframe>
+  </div>
 </template>
