@@ -8,7 +8,7 @@ const projects = [
     ],
     filter: ["featured", "dev", "ux"],
     description:
-      "I trained a machine learning model on regional historical weather forecasts to predict wind energy generation potential anywhere in the UK and along its coasts.This data was then made available via REST API endpoints for use within a wide range of applications. I developed a web appication to visualise data available from my API endpoints.",
+      "I trained a machine learning model on regional historical weather forecasts to predict wind energy generation potential anywhere in the UK and along its coasts. This model can be interacted with via REST API endpoints, facilitating a wide range of applications. Additionally, a web application was created to visualize the data available through the API.",
     imageSrc: new URL("../assets/tq-hero-3.png", import.meta.url).href,
     imageAlt: "hot air balloon festival",
     shortTitle: "terraqi",

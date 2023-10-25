@@ -9,7 +9,7 @@
       performance?
     </h1>
     <h3 class="mb-4">
-      As part of my Thermofluids module in Year 2, I had to develop a proposal
+      As part of my Thermofluids module in Year 2, I developed a proposal
       and assessment of interventions to retrofit a home with energy-saving and
       energy-generation assets to achieve net-zero energy losses.
     </h3>
