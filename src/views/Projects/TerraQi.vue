@@ -7,8 +7,9 @@
       For my Master's project, I developed a machine learning model that
       predicts wind energy generation potential anywhere in the UK and along its
       coasts. This model can be interacted with via REST API endpoints,
-      facilitating a wide range of applications. Additionally, a web application
-      was created to visualize the data available through the API.
+      facilitating a wide range of applications. You can explore the data
+      available via the API at
+      <a href="https://www.terraqi.com">www.terraqi.com</a>.
     </h3>
     <p class="mb-8">
       <span class="font-bold">Time Frame: </span>5 months<br />
