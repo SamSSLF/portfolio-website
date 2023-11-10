@@ -306,7 +306,7 @@
       forecast data.
     </p>
   </article>
-  <article
+  <!-- <article
     class="mt-8 col-start-2 col-span-1 prose prose-h1:text-4xl prose-h1:font-bold prose-h1:mb-2 prose-p:prose-md prose-h3:font-normal"
   >
     <h1>What is its impact?</h1>
@@ -328,11 +328,11 @@
     <ul>
       <li></li>
     </ul>
-  </article>
+  </article> -->
   <article
     class="mt-8 col-start-2 col-span-1 prose prose-h1:text-4xl prose-h1:font-bold prose-h1:mb-2 prose-p:prose-md prose-h3:font-normal"
   >
-    <h2>Open Source Project</h2>
+    <h1>Open Source Project</h1>
     <p>
       My project continues to have an impact as an open-source project, which
       you can contribute to
