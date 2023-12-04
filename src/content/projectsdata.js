@@ -12,6 +12,7 @@ const projects = [
     imageSrc: new URL("../assets/tq-hero-3.png", import.meta.url).href,
     imageAlt: "hot air balloon festival",
     shortTitle: "terraqi",
+    category: "Web Development",
   },
   {
     title: "Atmo Environmental Monitoring Portal",
@@ -22,6 +23,7 @@ const projects = [
     imageSrc: new URL("../assets/atmo-hero-3.png", import.meta.url).href,
     imageAlt: "hot air balloon festival",
     shortTitle: "Atmo",
+    category: "Web Development",
   },
   {
     title: "Fable Language-Learning Toy",
@@ -38,6 +40,7 @@ const projects = [
     imageSrc: new URL("../assets/fable-hero-4.png", import.meta.url).href,
     imageAlt: "fable hero image",
     shortTitle: "Fable",
+    category: "Product Design",
   },
   {
     title: "Smart Gym Mobile App Design",
@@ -48,6 +51,7 @@ const projects = [
     imageSrc: new URL("../assets/stance-mockup-1.png", import.meta.url).href,
     imageAlt: "hot air balloon festival",
     shortTitle: "Stance",
+    category: "Product Design",
   },
   {
     title: "Juno Circular Toy Company",
@@ -64,6 +68,7 @@ const projects = [
     imageSrc: new URL("../assets/juno-hero.jpg", import.meta.url).href,
     imageAlt: "hot air balloon festival",
     shortTitle: "Juno",
+    category: "Product Design",
   },
   {
     title: "Carbon Zero Home",
@@ -74,6 +79,7 @@ const projects = [
     imageSrc: new URL("../assets/frontcut-cnh.jpg", import.meta.url).href,
     imageAlt: "hot air balloon festival",
     shortTitle: "carbon-zero-home",
+    category: "Design Engineering",
   },
   {
     title: "Ergonomic Electric Wine Bottle Opener",
@@ -89,6 +95,7 @@ const projects = [
     imageSrc: new URL("../assets/wine-opener-hero.jpg", import.meta.url).href,
     imageAlt: "hot air balloon festival",
     shortTitle: "ergonomic-wine-bottle-opener",
+    category: "Design Engineering",
   },
   {
     title: "A Lightweight Tandem Bicycle Frame",
@@ -99,6 +106,7 @@ const projects = [
     imageSrc: new URL("../assets/FEA-hero.jpg", import.meta.url).href,
     imageAlt: "hot air balloon festival",
     shortTitle: "tandem-bike",
+    category: "Design Engineering",
   },
 ];
 
